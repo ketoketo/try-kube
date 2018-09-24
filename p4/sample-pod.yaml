@@ -5,4 +5,4 @@ metadata:
 spec:
   containers:
     - name: nginx-container
-      image: nginx:1.13
+      image: tobi312/rpi-nginx:1.10
