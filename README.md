@@ -41,3 +41,15 @@ kubectl port-forward sample-pod 8888:80
 kubectl -v=6 get pod
 kubectl -v=8 apply -f sample-pod.yaml
 ```
+### ReplicaSetの一覧を表示
+```
+kubectl get replicasets
+```
+### Deploymentの確認
+```
+kubectl get deployments
+```
+### Deploymentのスケーリング
+```
+kubectl scale deployment sample-deployment --replica=5
+```
