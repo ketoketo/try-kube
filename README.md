@@ -28,6 +28,11 @@ kubectl exec -it sample-pod -c nginx-container /bin/sh
 ```
 kubectl exec -it sample-pod -- /bin/ls -l /tmp/
 ```
+### podのログ確認
+```
+kubectl logs sample-pod
+kubectl logs -f sample-pod
+```
 ### podのコンテナからファイルコピー
 ```
 kubectl cp sample-pod:/etc/hostname .
