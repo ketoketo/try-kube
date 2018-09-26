@@ -58,3 +58,11 @@ kubectl get deployments
 ```
 kubectl scale deployment sample-deployment --replica=5
 ```
+### serviceの確認
+```
+kubectl get service
+```
+### podとIPの確認
+```
+kubectl get nodes -o custom-columns="NAME:{metadata.name},IP:{status.addresses[].address}"
+```

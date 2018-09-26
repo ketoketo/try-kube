@@ -5,7 +5,9 @@ metadata:
 spec:
   type: ClusterIP
   externalIPs:
-    - 192.168.65.3
+    - 192.168.11.201
+    - 192.168.11.202
+    - 192.168.11.203
   ports:
     - name: "http-port"
       protocol: "TCP"
