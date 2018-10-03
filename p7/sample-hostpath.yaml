@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: sample-hostpath
+spec:
+  containers:
+  - image: nginx:1.12
+    name: nginx-container
+    volumeMounts:
+    - mountPath: /cache
+      name: cache-volume
+  volumes:
+  - name: cache-volume
+    hostPath:
+      path: /c/Users/tmatsuzaki/Documents/GitHub/try-kube/p7/test
+      type: DirectoryOrCreate
