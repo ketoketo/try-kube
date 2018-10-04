@@ -66,3 +66,7 @@ kubectl get service
 ```
 kubectl get nodes -o custom-columns="NAME:{metadata.name},IP:{status.addresses[].address}"
 ```
+### 一時的にテストPod起動
+```
+kubectl run --image=centos:6 --restart=Never --rm -it testpod bash
+```
