@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: sample-liveness
+  labels:
+    app: sample-ap
+spec:
+  containers:
+    - name: nginx-container
+      image: nginx:1.12
+      ports:
+      - containerPort: 80
+      livenessProbe:
+        httpGet:
+          path: /index.html
+          port: 80
+          scheme: HTTP
+        successThreshold: 1
+        failureThreshold: 3
+        initialDelaySeconds: 5
+        periodSeconds: 3
