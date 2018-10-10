@@ -1,4 +1,4 @@
-# try-kube!
+# try-kube
 ## コマンド備忘
 ### node確認
 ```
